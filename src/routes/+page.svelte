@@ -15,6 +15,7 @@
 </script>
 
 <h1 bind:this={headline} class="dim-left dim-right">Hey, I'm Michał</h1>
+<h2>More coming soon...</h2>
 
 <style>
     @property --gradient-color-left {
@@ -55,5 +56,13 @@
         &.dim-right {
             --gradient-color-right: #333344;
         }
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+
+        background-image: linear-gradient(to right, #223333, #333344);
+        background-clip: text;
+        color: transparent;
     }
 </style>

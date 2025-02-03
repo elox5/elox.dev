@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { Moon, Sun } from "lucide-svelte";
+    import Fa from "svelte-fa";
+    import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+
     import { onMount } from "svelte";
     import "../app.css";
 
@@ -25,8 +27,7 @@
 <div class="app">
     <nav>
         <a href="/">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="/contact">Contact</a>
         <div class="spacer"></div>
         <button
             class="theme-toggle"
@@ -34,9 +35,9 @@
             aria-label="Toggle theme"
         >
             {#if currentTheme === "light"}
-                <Moon class="theme-icon" />
+                <Fa icon={faMoon} size="2x" class="theme-icon" />
             {:else}
-                <Sun class="theme-icon" />
+                <Fa icon={faSun} size="2x" class="theme-icon" />
             {/if}
         </button>
         <p>&copy; {new Date().getFullYear()}</p>
@@ -89,37 +90,7 @@
     }
 
     a {
-        text-decoration: none;
-
         color: inherit;
-
-        transition: color 0.1s ease;
-
-        &::after {
-            content: "";
-            display: block;
-
-            width: 100%;
-            height: 2px;
-
-            background-color: light-dark(#fff, #000);
-
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition:
-                transform 0.2s ease-out,
-                background-color 0.2s ease-out;
-        }
-
-        &:hover {
-            color: #77ff77;
-
-            &::after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-                background-color: #77ff77;
-            }
-        }
     }
 
     p {

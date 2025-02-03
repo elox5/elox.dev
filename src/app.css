@@ -29,3 +29,42 @@ body {
 
     min-height: 100vh;
 }
+
+a,
+.underline-hover {
+    position: relative;
+
+    text-decoration: none;
+
+    transition: color 0.1s ease;
+
+    &::after {
+        content: "";
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: light-dark(#fff, #000);
+
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition:
+            transform 0.2s ease-out,
+            background-color 0.2s ease-out;
+    }
+
+    &:hover {
+        color: #77ff77 !important;
+
+        &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            background-color: #77ff77;
+        }
+    }
+}

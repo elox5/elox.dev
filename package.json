@@ -21,6 +21,9 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"lucide-svelte": "^0.474.0"
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/free-regular-svg-icons": "^6.7.2",
+		"svelte-fa": "^4.0.3",
+		"svelte-light-carousel": "^1.0.5"
 	}
 }
