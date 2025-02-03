@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
 
 :root {
+    color-scheme: light dark;
+
     font-family: 'Figtree', Arial, Helvetica, sans-serif;
 
-    --background-color: #000;
-    --text-color: #ddd;
+    background-color: light-dark(#fff, #000);
+    color: light-dark(#222, #ddd);
 
-    background-color: var(--background-color);
-    color: var(--text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &[data-theme='dark'] {
+        color-scheme: dark;
+    }
+
+    &[data-theme='light'] {
+        color-scheme: light;
+    }
 }
 
 * {
