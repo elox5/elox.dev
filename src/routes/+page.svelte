@@ -33,6 +33,7 @@
     h1,
     h2 {
         user-select: none;
+        margin: 0;
     }
 
     h1 {
