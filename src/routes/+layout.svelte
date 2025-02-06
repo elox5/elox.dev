@@ -1,9 +1,14 @@
 <script lang="ts">
     import Fa from "svelte-fa";
-    import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+    import {
+        faExternalLink,
+        faMoon,
+        faSun,
+    } from "@fortawesome/free-solid-svg-icons";
 
     import { onMount } from "svelte";
     import "../app.css";
+    import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
     const { children } = $props();
 
@@ -28,7 +33,9 @@
     <nav>
         <a href="/">Home</a>
         <a href="/contact">Contact</a>
+
         <div class="spacer"></div>
+
         <button
             class="theme-toggle"
             onclick={toggleTheme}
@@ -41,6 +48,9 @@
             {/if}
         </button>
         <p>&copy; {new Date().getFullYear()}</p>
+        <a href="https://github.com/elox5/elox.dev" target="_blank">
+            Source <Fa icon={faExternalLink} size="xs" />
+        </a>
     </nav>
     <main>
         {@render children()}
