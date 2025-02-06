@@ -1,0 +1,14 @@
+{
+    "languages": [
+        {
+            "id": "rust",
+            "name": "Rust",
+            "color": "#dea584"
+        },
+        {
+            "id": "typescript",
+            "name": "TypeScript",
+            "color": "#007acc"
+        }
+    ]
+}

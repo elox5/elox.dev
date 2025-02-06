@@ -1,0 +1,12 @@
+{
+    "projects": [
+        {
+            "name": "Evades+",
+            "source": "https://github.com/elox5/evadesplus",
+            "languages": [
+                "rust",
+                "typescript"
+            ]
+        }
+    ]
+}

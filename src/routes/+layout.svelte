@@ -32,6 +32,7 @@
 <div class="app">
     <nav>
         <a draggable="false" href="/">Home</a>
+        <a draggable="false" href="/projects">Projects</a>
         <a draggable="false" href="/contact">Contact</a>
 
         <div class="spacer"></div>
