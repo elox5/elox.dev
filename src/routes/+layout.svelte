@@ -31,8 +31,8 @@
 
 <div class="app">
     <nav>
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
+        <a draggable="false" href="/">Home</a>
+        <a draggable="false" href="/contact">Contact</a>
 
         <div class="spacer"></div>
 
@@ -85,6 +85,8 @@
         font-size: 1.2rem;
 
         color: light-dark(#ddd, #222);
+
+        user-select: none;
     }
 
     main {
