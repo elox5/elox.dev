@@ -5,7 +5,7 @@
 
     font-family: 'Figtree', Arial, Helvetica, sans-serif;
 
-    background-color: light-dark(#fff, #000);
+    background-color: light-dark(#efe, #001107);
     color: light-dark(#222, #ddd);
 
     transition: background-color 0.2s ease, color 0.2s ease;
