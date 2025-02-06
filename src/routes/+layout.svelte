@@ -1,6 +1,6 @@
 <script lang="ts">
     import Fa from "svelte-fa";
-    import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+    import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
     import { onMount } from "svelte";
     import "../app.css";

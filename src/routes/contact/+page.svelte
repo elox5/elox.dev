@@ -1,14 +1,7 @@
 <script lang="ts">
     import Fa from "svelte-fa";
     import { faDiscord, faGithub } from "@fortawesome/free-brands-svg-icons";
-    import {
-        faClipboard,
-        faEnvelope,
-    } from "@fortawesome/free-regular-svg-icons";
-
-    function copy(text: string) {
-        navigator.clipboard.writeText(text);
-    }
+    import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 </script>
 
 <h2>
