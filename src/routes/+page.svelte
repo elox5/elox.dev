@@ -30,6 +30,11 @@
         inherits: false;
     }
 
+    h1,
+    h2 {
+        user-select: none;
+    }
+
     h1 {
         --gradient-color-left: #77ff77;
         --gradient-color-right: #77ffff;
