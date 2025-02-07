@@ -210,6 +210,8 @@
         gap: 0.5rem;
 
         font-weight: bold;
+
+        text-shadow: 2px 2px 2px #000000;
     }
 
     .blur-mask {
