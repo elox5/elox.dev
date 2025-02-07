@@ -2,6 +2,7 @@
     import {
         faExternalLink,
         faSpinner,
+        faStar,
     } from "@fortawesome/free-solid-svg-icons";
     import Fa from "svelte-fa";
 
@@ -55,10 +56,11 @@
     <p class="loading"><Fa icon={faSpinner} /> Loading projects...</p>
 {:then projects}
     <div class="project-grid">
-        {#each projects as project}
+        {#each projects as project, i}
             <div
                 style="background-image: url('{project.image}');"
                 class="project-entry"
+                data-index={i}
             >
                 <div class="blur-mask"></div>
 
@@ -79,6 +81,20 @@
                     >
                         Source <Fa icon={faExternalLink} size="xs" />
                     </a>
+                {/if}
+
+                {#if i === 0}
+                    <div class="featured-indicator">
+                        <Fa
+                            class="star-icon"
+                            icon={faStar}
+                            color="#ffdd7f"
+                            size="lg"
+                        />
+                        <span class="featured-indicator-text">
+                            Featured Project
+                        </span>
+                    </div>
                 {/if}
 
                 <div class="project-languages">
@@ -105,6 +121,7 @@
 
     .project-grid {
         --bounce-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --ease-out-easing: cubic-bezier(0.22, 1, 0.36, 1);
 
         width: 100%;
 
@@ -167,6 +184,22 @@
             & > .project-source-link {
                 opacity: 1;
             }
+
+            & .featured-indicator-text {
+                width: 100%;
+            }
+        }
+    }
+
+    .project-entry[data-index="0"] {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        width: 100%;
+        height: 100%;
+
+        & > .project-title {
+            font-size: 4rem;
         }
     }
 
@@ -199,6 +232,34 @@
         opacity: 0;
 
         transition: opacity 0.3s ease;
+    }
+
+    .featured-indicator {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        gap: 10px;
+
+        text-shadow: 2px 2px 2px #000000;
+    }
+
+    .featured-indicator :global(.star-icon) {
+        filter: drop-shadow(2px 2px 2px #000000);
+    }
+
+    .featured-indicator-text {
+        width: 0;
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        font-size: 1.1rem;
+
+        transition: width 0.5s var(--ease-out-easing);
     }
 
     .project-languages {
