@@ -124,15 +124,25 @@
         --ease-out-easing: cubic-bezier(0.22, 1, 0.36, 1);
 
         width: 100%;
-
         height: 100%;
-        margin: 3rem;
+
+        padding-block: 24px;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, 300px);
-        align-content: center;
+        align-content: start;
         justify-content: center;
         gap: 1rem;
+
+        overflow-y: scroll;
+
+        mask-image: linear-gradient(
+            to bottom,
+            transparent 0px,
+            black 24px,
+            black calc(100% - 24px),
+            transparent 100%
+        );
     }
 
     .project-grid:has(:hover) {
