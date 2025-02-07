@@ -126,7 +126,7 @@
         width: 100%;
         height: 100%;
 
-        padding-block: 24px;
+        padding: 24px;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, 300px);
