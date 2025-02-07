@@ -55,60 +55,62 @@
 {#await fetch_projects()}
     <p class="loading"><Fa icon={faSpinner} /> Loading projects...</p>
 {:then projects}
-    <div class="project-grid">
-        {#each projects as project, i}
-            <div
-                style="background-image: url('{project.image}');"
-                class="project-entry"
-                data-index={i}
-            >
-                <div class="blur-mask"></div>
+    <div class="grid-wrapper">
+        <div class="project-grid">
+            {#each projects as project, i}
+                <div
+                    style="background-image: url('{project.image}');"
+                    class="project-entry"
+                    data-index={i}
+                >
+                    <div class="blur-mask"></div>
 
-                <h2 class="project-title">{project.name}</h2>
+                    <h2 class="project-title">{project.name}</h2>
 
-                <a
-                    class="project-link-overlay"
-                    href={project.link ?? project.source ?? ""}
-                    target="_blank"
-                    aria-label="View project source"
-                ></a>
-
-                {#if project.link && project.source}
                     <a
-                        class="project-source-link"
-                        href={project.source}
+                        class="project-link-overlay"
+                        href={project.link ?? project.source ?? ""}
                         target="_blank"
-                    >
-                        Source <Fa icon={faExternalLink} size="xs" />
-                    </a>
-                {/if}
+                        aria-label="View project source"
+                    ></a>
 
-                {#if i === 0}
-                    <div class="featured-indicator">
-                        <Fa
-                            class="star-icon"
-                            icon={faStar}
-                            color="#ffdd7f"
-                            size="lg"
-                        />
-                        <span class="featured-indicator-text">
-                            Featured Project
-                        </span>
-                    </div>
-                {/if}
-
-                <div class="project-languages">
-                    {#each project.languages as language}
-                        <span
-                            style="color: {language.color};"
-                            title={language.name}
+                    {#if project.link && project.source}
+                        <a
+                            class="project-source-link"
+                            href={project.source}
+                            target="_blank"
                         >
-                            {language.short}
-                        </span>
-                    {/each}
+                            Source <Fa icon={faExternalLink} size="xs" />
+                        </a>
+                    {/if}
+
+                    {#if i === 0}
+                        <div class="featured-indicator">
+                            <Fa
+                                class="star-icon"
+                                icon={faStar}
+                                color="#ffdd7f"
+                                size="lg"
+                            />
+                            <span class="featured-indicator-text">
+                                Featured Project
+                            </span>
+                        </div>
+                    {/if}
+
+                    <div class="project-languages">
+                        {#each project.languages as language}
+                            <span
+                                style="color: {language.color};"
+                                title={language.name}
+                            >
+                                {language.short}
+                            </span>
+                        {/each}
+                    </div>
                 </div>
-            </div>
-        {/each}
+            {/each}
+        </div>
     </div>
 {:catch error}
     <p style="color: red">{error}</p>
@@ -119,17 +121,27 @@
         color: light-dark(#222, #ddd);
     }
 
+    .grid-wrapper {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .project-grid {
         --bounce-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
         --ease-out-easing: cubic-bezier(0.22, 1, 0.36, 1);
 
         width: 100%;
-        height: 100%;
 
         padding: 24px;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, 300px);
+        grid-auto-rows: 200px;
         align-content: start;
         justify-content: center;
         gap: 1rem;
