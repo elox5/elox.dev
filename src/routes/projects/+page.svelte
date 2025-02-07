@@ -76,7 +76,7 @@
 
                     {#if project.link && project.source}
                         <a
-                            class="project-source-link"
+                            class="project-source-link underline-hover"
                             href={project.source}
                             target="_blank"
                         >
@@ -239,11 +239,6 @@
     .project-link-overlay {
         position: absolute;
         inset: 0;
-
-        &::after {
-            content: "";
-            background-color: transparent;
-        }
     }
 
     .project-source-link {

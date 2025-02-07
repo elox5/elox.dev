@@ -30,9 +30,11 @@
 
 <div class="app">
     <nav>
-        <a draggable="false" href="/">Home</a>
-        <a draggable="false" href="/projects">Projects</a>
-        <a draggable="false" href="/contact">Contact</a>
+        <a draggable="false" class="underline-hover" href="/">Home</a>
+        <a draggable="false" class="underline-hover" href="/projects">
+            Projects
+        </a>
+        <a draggable="false" class="underline-hover" href="/contact">Contact</a>
 
         <div class="spacer"></div>
 
@@ -48,7 +50,11 @@
             {/if}
         </button>
         <p>&copy; {new Date().getFullYear()}</p>
-        <a href="https://github.com/elox5/elox.dev" target="_blank">
+        <a
+            class="underline-hover"
+            href="https://github.com/elox5/elox.dev"
+            target="_blank"
+        >
             Source <Fa icon={faExternalLink} size="xs" />
         </a>
     </nav>
