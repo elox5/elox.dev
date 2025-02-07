@@ -23,7 +23,7 @@
     <Fa icon={faGithub} />
     github.com/elox5
 </a>
-<a class="underline-hover" href="https://el0x.itch.io" target="_blank">
+<a class="underline-hover" href="https://elox5.itch.io" target="_blank">
     <Fa icon={faItchIo} />
     el0x.itch.io
 </a>
