@@ -8,7 +8,6 @@
 
     import { onMount } from "svelte";
     import "../app.css";
-    import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
     const { children } = $props();
 

@@ -3,12 +3,26 @@
         {
             "id": "rust",
             "name": "Rust",
+            "short": "Rs",
             "color": "#dea584"
         },
         {
             "id": "typescript",
             "name": "TypeScript",
+            "short": "Ts",
             "color": "#007acc"
+        },
+        {
+            "id": "svelte",
+            "name": "Svelte",
+            "short": "Sv",
+            "color": "#ff3e00"
+        },
+        {
+            "id": "csharp",
+            "name": "C#",
+            "short": "C#",
+            "color": "#9b4993"
         }
     ]
 }

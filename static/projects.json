@@ -3,9 +3,48 @@
         {
             "name": "Evades+",
             "source": "https://github.com/elox5/evadesplus",
+            "image": "/images/projects/evadesplus.png",
             "languages": [
                 "rust",
                 "typescript"
+            ]
+        },
+        {
+            "name": "elox.dev",
+            "source": "https://github.com/elox5/elox.dev",
+            "link": "https://elox.dev",
+            "image": "/images/projects/eloxdev.png",
+            "languages": [
+                "svelte",
+                "typescript"
+            ]
+        },
+        {
+            "name": "S-Tier",
+            "source": "https://github.com/elox5/s-tier",
+            "link": "https://elox5.github.io/s-tier",
+            "image": "/images/projects/stier.png",
+            "languages": [
+                "svelte",
+                "typescript"
+            ]
+        },
+        {
+            "name": "Evades Runs",
+            "source": "https://github.com/elox5/evades-runs",
+            "link": "https://elox5.github.io/evades-runs",
+            "image": "/images/projects/evadesruns.png",
+            "languages": [
+                "svelte",
+                "typescript"
+            ]
+        },
+        {
+            "name": "Sokobind",
+            "link": "https://el0x.itch.io/sokobind",
+            "image": "/images/projects/sokobind.png",
+            "languages": [
+                "csharp"
             ]
         }
     ]

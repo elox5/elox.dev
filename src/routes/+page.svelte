@@ -15,6 +15,7 @@
 </script>
 
 <h1 bind:this={headline} class="dim-left dim-right">Hey, I'm Michał</h1>
+
 <h2>More coming soon...</h2>
 
 <style>
